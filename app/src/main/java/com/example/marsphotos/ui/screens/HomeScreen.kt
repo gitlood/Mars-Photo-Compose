@@ -45,7 +45,7 @@ fun HomeScreen(
 ) {
     when (marsUiState) {
         is MarsUiState.Loading -> LoadingScreen(modifier = modifier)
-        is MarsUiState.Success -> MarsPhotoCard(photo = marsUiState.photos, modifier = modifier)
+        is MarsUiState.Success -> PhotosGridScreen(marsUiState.photos, modifier)
         else -> ErrorScreen(retryAction = retryAction, modifier = modifier)
     }
 }
