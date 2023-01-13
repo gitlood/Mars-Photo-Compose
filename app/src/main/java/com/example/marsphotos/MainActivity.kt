@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MarsPhotosTheme {
                 val viewModel: MarsViewModel = viewModel(factory = MarsViewModel.Factory)
-                MarsPhotosApp()
+                MarsPhotosApp(viewModel)
             }
         }
     }
